@@ -60,8 +60,19 @@ $ icacls "C:\Users\mahig\Desktop\ansible-master-key.pem" /inheritance:r /grant:r
 # Verify permissions
 $ icacls "C:\Users\mahig\Desktop\ansible-master-key.pem"
 
+# All servers used private key by using:
+change in : $ sudo nano /etc/ansible/hosts
 
+[servers:vars]
+ansible_ssh_private_key_file=Path of the server pem file
+ansible_python_interpreter=/usr/bin/python3 (for every server python3 will be installed)
+ansible_user=ubuntu
 
+# Run to check ping or connectivity of the all the servers
+$ ansible servers -m ping
+
+# Update all the servers using :
+$ ansible servers -a"sudo apt update"
 
 
 
