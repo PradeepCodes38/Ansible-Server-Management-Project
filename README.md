@@ -43,7 +43,7 @@ $ cd keys
 # We have to tranfer the pem file from local to server:
 1. Open the ansible-master instances
 2. Go to the SSH client copy the example :
-    ssh -i "ansible-master-key.pem" ubuntu@ec2-13-232-125-157.ap-south-1.compute.amazonaws.com
+   scp -i "C:/Users/mahig/Desktop/Ansible.pem" C:/Users/mahig/Desktop/Ansible.pem ubuntu@ec2-IP.compute-1.amazonaws.com:/home/ubuntu/keys
 
 3. Set Permissions for the Private Key:
 # Set appropriate permissions for the private key file in WSL to ensure it's secure:
